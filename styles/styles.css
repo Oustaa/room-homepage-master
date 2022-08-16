@@ -1,0 +1,273 @@
+:root {
+    --Dark-Gray: hsl(0, 0%, 63%);
+    --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #000;
+}
+
+p {
+    font-size: 1.2rem;
+    color: var(--Dark-Gray);
+}
+
+.img {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-block: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+nav .brand {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.links {
+    background: #fff;
+    padding-block: 40px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms;
+    z-index: 1;
+}
+
+.links::after {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.54);
+    z-index: 0;
+}
+
+.links button {
+    background: transparent;
+    border: none;
+}
+
+.OpenBtn {
+    position: absolute;
+    left: 15px;
+    background: transparent;
+    border: none;
+}
+
+.hero {
+    display: flex;
+    overflow: hidden;
+}
+
+.subHero {
+    display: flex;
+    flex-direction: column;
+    transition: transform 1s;
+    min-width: 100vw;
+}
+
+.hero_image {
+    position: relative;
+}
+
+.subHero .hero_content {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.subHero .hero_content h1 {
+    margin-bottom: 20px;
+}
+
+.subHero a {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-top: 60px;
+    display: inline-block;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about_content {
+    padding: 40px 20px;
+}
+
+.about_content h1 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.about_image {
+    width: 100%;
+}
+
+.about_image img {
+    max-width: 100%;
+}
+
+.btns {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 2000;
+    transform: translateY(-105%);
+}
+
+.btns button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: black;
+}
+
+.btns button:hover {
+    background: var(--Dark-Gray);
+    cursor: pointer;
+}
+
+.hero_content a:hover {
+    color: var(--Dark-Gray);
+}
+
+@media screen and (min-width: 800px) {
+    .hero {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    .subHero {
+        flex-direction: row;
+    }
+    .subHero>div {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+    }
+    .subHero .hero_content {
+        padding-inline: 60px 20px;
+    }
+    .subHero .hero_content h1 {
+        font-size: 5rem;
+    }
+    .subHero .hero_content p {
+        width: 80%;
+    }
+    .subHero .hero_image>img {
+        height: 65vh;
+        width: 100%;
+        object-fit: cover;
+    }
+    .about {
+        flex-direction: row;
+        max-width: 100%;
+    }
+    .about .about_image {
+        width: 150%;
+        object-fit: cover;
+    }
+    .about img {
+        height: 100%;
+        object-fit: cover;
+    }
+    .btns {
+        width: 150px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 2000;
+        transform: translateX(100%) translateY(-100%);
+    }
+    .btns button {
+        width: 75px;
+        height: 70px;
+    }
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-block: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2000;
+        padding-inline: 80px;
+    }
+    .links {
+        background: transparent;
+        padding-block: 40px;
+        align-items: center;
+        width: unset;
+        transform: scaleX(1);
+        height: 100%;
+        left: unset;
+        padding-inline-start: 90px;
+        align-items: flex-end;
+    }
+    .links a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+    }
+    .links a+a {
+        margin-left: 40px;
+    }
+    .links::after {
+        background: unset;
+    }
+    nav .brand {
+        font-size: 2rem;
+        color: #fff;
+        text-align: left;
+    }
+    .OpenBtn,
+    .CloseBtn {
+        display: none;
+    }
+}

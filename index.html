@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Frontend Mentor | Room homepage</title>
+</head>
+
+<body>
+    <nav>
+        <button class="OpenBtn" onclick="openCloseMenu()"><img src="./images/icon-hamburger.svg" alt=""></button>
+        <a href="#" class="brand">room</a>
+        <div class="links" id="links">
+            <button class="CloseBtn" onclick="openCloseMenu()"> <img src="./images/icon-close.svg" alt=""></button>
+            <a href="">Home</a>
+            <a href="">Shop</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="hero-1 subHero">
+            <div class="hero_image">
+                <img src="./images/mobile-image-hero-1.jpg" alt="" class="img">
+                <div class="btns">
+                    <button class="left-btn" onclick="previosHero()"><img src="./images/icon-angle-left.svg" alt=""></button>
+                    <button class="right-btn" onclick="nextHero()"><img src="./images/icon-angle-right.svg" alt=""></button>
+                </div>
+            </div>
+
+            <div class="hero_content">
+                <h1>Discover innovative ways to decorate</h1>
+                <p>We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property
+                    a reflection of you and what you love.</p>
+                <a href="#">Shop now <img src="./images/icon-arrow.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="hero-2 subHero">
+            <div class="hero_image">
+                <img class="img" src="./images/mobile-image-hero-2.jpg" alt="">
+            </div>
+            <div class="hero_content">
+                <h1>We are available all across the globale </h1>
+                <p>With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't
+                    hesitate to contact us today.</p>
+                <a href="#">Shop now <img src="./images/icon-arrow.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="hero-3 subHero">
+            <div class="hero_image">
+                <img class="img" src="./images/mobile-image-hero-3.jpg" alt="">
+            </div>
+            <div class="hero_content">
+                <h1>Manufactured with the best materials</h1>
+                <p>Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry,
+                    we understand what customers want for their home and office.</p>
+                <a href="#">Shop now <img src="./images/icon-arrow.svg" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about">
+        <div class="about_image">
+            <img class="img" src="./images/image-about-dark.jpg" alt="">
+        </div>
+        <div class="about_content">
+            <h1>About our furniture</h1>
+            <p>Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional
+                to contemporary styles or anything in between. Product specialists are available to help you create your dream space.</p>
+        </div>
+        <div class="about_image">
+            <img class="img" src="./images/image-about-light.jpg" alt="">
+        </div>
+    </div>
+    <script src="./javascript/program.js"></script>
+</body>
+
+</html>
